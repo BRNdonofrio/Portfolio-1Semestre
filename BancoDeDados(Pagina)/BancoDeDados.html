@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="../Script_JS/jquery.js"></script>
+    <script src="../Script_JS/java.js" defer></script>
+    <link rel="icon" href="../Imagens/LogoMenorshorticon.png">
+</head>
+<body>
+    <div id="nome">
+        <a href="../index.html"><h6>Bruno D'Onofrio</h6></a>
+        <img src="../Imagens/LogoMenor.png">
+    </div>
+<div id="menu">
+    <ul class="nav-links">
+        <a href="../index.html"><li>Home</li></a>
+        <a href="BancoDeDados.html"><li>Banco de Dados</li></a>
+    </ul>
+    <div class="burguer">
+        <div id="linha1"></div>
+            <div id="linha2"></div>
+        <div id="linha3"></div>
+    </div>
+    <div class="fg">
+        <a href="./BrModelo/BibliotecaTrab2.brM3"><img src="../Imagens/IMGBiblioteca.PNG" alt="" id="ft1"></a>
+        <a href="./BrModelo/BrModelo1Modelo.brM3"><img src="../Imagens/IMGSistemaGenérico.PNG" alt="" id="ft2"></a>
+        <a href="./BrModelo/Dados.bebê.brM3"><img src="../Imagens/IMGBerçárioMER.PNG" alt="" id="ft3"></a>
+    </div>
+    <p id="texto"></p>
+    <div class="fp">
+        <img src="../Imagens/IMGBiblioteca.PNG" alt="" data-foto="#ft1" data-texto="D.E.R Biblioteca">
+        <img src="../Imagens/IMGSistemaGenérico.PNG" alt="" data-foto="#ft2" data-texto="D.E.R Sistema Genérico">
+        <img src="../Imagens/IMGBerçárioMER.PNG" alt="" data-foto="#ft3" data-texto="M.E.R Berçário">
+    </div>
+    <script>
+        const imagensMinis = document.querySelectorAll('.fp>img');
+        imagensMinis.forEach(element => {
+            element.addEventListener('click',() =>{
+                console.log(element.dataset.foto);
+                let id = element.dataset.foto;
+                let texto = element.dataset.texto;
+                $('.fg>a>img').fadeOut(1000);
+                $(id).fadeIn(500);
+                $('#texto').html(texto);
+            });
+        });
+    </script>
+</body>
+</html>

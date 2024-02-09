@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+@font-face {
+    font-family: 'Josefin';
+    src: url('../Fontes/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  }
+  #nome>a>h6{
+      font-size: 20px;
+      float: left;
+      margin-top: 1%;
+      margin-left: 2%;
+      font-family: 'Josefin';
+      text-shadow: 0em 0em 0.2em green;
+      transition: 1s;
+      cursor: default;
+  }
+  #nome>img{
+      float: left;
+      width: 2%;
+      position: relative;
+      margin-top: 0.4%;
+      left: 72%;
+  }
+  #nome>a>h6:hover{
+      text-shadow: 0 0 0.2em white;
+      transition: 1s;
+  }
+#menu>ul{
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    margin: 1%;
+}
+#menu>ul>a{
+    padding: 1%;
+    margin-right: 1%;
+    font-family: 'Josefin';
+    cursor: pointer;
+    transition: 1s;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+}
+#menu>ul>a:hover{
+    text-shadow: 2px 2px 3px black;
+    background-color: rgba(0, 128, 0, 0.274);
+    /* background-color: rgb(152, 176, 196); */
+    transition: 1s;
+}
+.burguer{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-top: 1%;
+    margin-right: 5%;
+}
+.burguer>div{
+    width: 26px;
+    height: 4px;
+    background-color: black;
+    margin: 4px;
+}
+.excel>h1{
+    text-align: center;
+    font-size: 350%;
+    color: green;
+    text-shadow: 0 0 0.05em green;
+    font-family: 'Josefin';
+}
+/* .sombra{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), #33c481, white);
+} */
+
+.projetos1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    font-family: 'Josefin';
+    font-size: 60%;
+    text-align: center;
+    padding: 1%;
+}
+
+.projetos1 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 32px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.projetos1 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
+    
+}
+
+.projetos1 img:hover{
+    transform: scale(0.5,0.5);
+}
+
+.projetos2{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Josefin';
+    font-size: 60%;
+    text-align: center;
+    margin-top: 5%;
+    padding: 1%;
+}
+
+.projetos2 img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 32px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.projetos2 div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column ;
+   
+}
+
+.projetos2 img:hover{
+    transform: scale(0.5,0.5);
+}
+    @media (max-width:1366px){
+        #nome>img{
+            left: 74%;
+        }
+    }
+    @media (max-width:1120px)
+    {
+        #menu > ul > a {
+            margin-top: 10%;
+            padding: 10%;
+            position: relative;
+            left: 20%;
+            font-family: 'Josefin';
+            cursor: pointer;
+            transition: 1s;
+            text-decoration: none;
+            color: black;
+        }
+        .nav-links{
+            flex-direction: column;
+            position: absolute;
+            top: 5%;
+            right: 0;
+            width: 17%;
+            align-items: center;
+            transform: translateX(100%);
+
+        }
+        .nav-links>li{
+            width: 400px;
+        }
+        .burguer{
+            display: inline;
+          }
+          .excel>h1{
+            font-size: 250%;
+            margin-right: -5%;
+            padding: 5%;
+        }
+        }
+        .nav-active{
+            transform: translateX(0%);
+            transition: 1s;
+            /* z-index: 999; */
+        }
+        .linha1-active{
+            transform: translateY(3.5px) rotate(405deg);
+            transition: 0.7s;  
+            cursor: pointer;
+        }
+        .linha3-active{
+            transform: rotate(45deg);
+            transition: 0s;
+            opacity: 0%;
+            cursor: pointer;
+        }
+        .linha2-active{
+            transform:rotate(-60deg);
+            transition: 0.7s;
+            transform: translateY(-4.5px) rotate(-405deg);
+            cursor: pointer;
+        }
+        
+@media (max-width: 735px) {
+    /* Adjustments for screens smaller than 735px */
+    .sombra > .projetos1 > div {
+        width: 50%;
+    }
+
+    .sombra > .projetos1 > div > h1 {
+        font-size: 100%;
+    }
+
+    .sombra > .projetos2 > div > h1 {
+        font-size: 100%;
+    }
+
+    .excel > h1 {
+        font-size: 200%;
+        padding: 20%;
+    }
+
+    .projetos1 img,
+    .projetos2 img {
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        position: relative;
+    }
+
+    .projetos1 img:hover,
+    .projetos2 img:hover {
+        transform: scale(0.8, 0.8);
+    }
+
+    
+}
