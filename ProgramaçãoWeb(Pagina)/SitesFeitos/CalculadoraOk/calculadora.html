@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UFT-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+         <link rel="icon" href="Imagem/ShortIcon.png">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+        
+    <div class="Central">
+        <form action="">
+            <div id="oi">
+                <h2><p>Valor1</p></h2>
+                <p><input type="number"name="Valor1" id=""></p>
+                <h2><p>Valor2</p></h2>
+                <p><input type="number"name="Valor2" id=""></p>
+                <p>
+                    <input type="button" value="+" onclick="somar (Valor1.value, Valor2.value)">
+                    <input type="button" value="-" onclick="subtrair (Valor1.value, Valor2.value)">
+                    <input type="button" value="x" onclick="multiplicar (Valor1.value, Valor2.value)">
+                    <input type="button" value="/" onclick="dividir (Valor1.value, Valor2.value)">
+                    <input type="button" value="%" onclick="porcentagem (Valor1.value, Valor2.value)">
+                </p>
+
+                <p>Resultado</p>
+                <input type="number" name="Resultado" id="txtResultado">
+                </div>
+
+        </form>    
+    </div>
+
+    <script>
+        function somar(v1,v2){
+            v1 = parseFloat(v1);
+                v2 = parseFloat(v2);
+
+            total = v1 + v2;
+            document.querySelector('#txtResultado').value = total;
+        }
+        function subtrair(v1,v2){
+            total = v1 - v2;
+            document.querySelector('#txtResultado').value = total;
+        }
+        function multiplicar(v1,v2){
+            total = v1 * v2;
+            document.querySelector('#txtResultado').value = total;
+        }
+        function dividir (v1,v2){
+            total = v1 / v2;
+            document.querySelector('*txtResultado').value = total;
+        }
+        function porcentagem (v1,v2){
+            total = (v1 / 100) * v2;
+            document.querySelector('#txtResultado').value = total;
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Incrível</title>
+    <link rel="stylesheet" href="estiloTabuada.css">
+    <link rel="shortcut icon" href="img/icon.png">
+</head>
+<body>
+    <div class="oi">
+        <div class="valor" id="valor1">0</div>
+        <div class="valor">X</div>
+        <div class="valor" id="valor2">0</div>
+        <div class="entrada">
+            <input type="number" id="txtResposta">
+            <!-- <input class="botao" type="button" value="Start" onclick="start()"> -->
+        </div>
+    </div>
+    <div class="resp">
+        <p id="pAcertos"></p>
+        <p id="pErros"></p>
+    </div>
+
+    <script src="App.js/app.js"></script>
+    <p id="display"></p>
+    <form action="" id="formId">
+        <p><input type="radio" name="escolha" value="0.5">0,5 minutos</p>
+        <p><input type="radio" name="escolha" value="1">1 minuto</p>
+        <p><input type="radio" name="escolha" value="1.5">1,5 minutos</p>
+        <p><input type="radio" name="escolha" value="3">3 minutos</p>
+        
+        <input type="button" value="Iniciar" onclick="this.disabled = true;iniciar()">
+        <!-- <input type="button" value="Parar" onclick="parar()"> -->
+        
+    </form>
+    <script>
+        const display = document.querySelector('#display');
+        const form = document.querySelector('#formId');
+        var timer;
+        var tempo = 0;
+        var minutos;
+        var segundos = 0;
+        
+        function iniciar(){
+            acertos = 0;
+            erros = 0;
+            escolha = form.escolha.value;
+            tempo = escolha * 60;
+            starTimer(tempo);
+            
+        }
+
+        function starTimer(){
+            timer = setInterval(() => {
+                if(tempo>=0){
+                    minutos = Math.trunc(tempo/60);
+                    segundos = tempo % 60;
+                    tempo--;
+                    if(segundos<10)
+                        display.innerHTML = minutos+":0"+segundos;
+                       else
+                        display.innerHTML = minutos+":"+segundos;
+                }else{
+                    location.reload();
+                    // parar();
+                }
+            }, 1000);
+        }
+        // function parar(){
+        //     clearInterval(timer);
+        // }
+
+    </script>
+</body>
+</html>

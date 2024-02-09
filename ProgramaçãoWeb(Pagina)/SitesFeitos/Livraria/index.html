@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>DrIK</title>
+    <link rel="shortcut icon" href="img/literature_thebook_3708.ico">
+</head>
+<body>
+    <div class="topo">
+        <h1>Livraria Drik</h1>
+        <input type="text" name="" id="" placeholder="O que você quer ler agora?">
+        <ul class="lista">
+
+            <a href="#"><li>Suspense</li></a>
+
+            <a href="#"><li>Terror</li></a>
+
+            <a href="#"><li>Fantasia</li></a>
+
+            <a href="#"><li>Romance</li></a>
+
+            <a href="#"><li>Ficção Científica</li></a>
+        </ul>
+    
+        <div class="burguer">
+            <div id="linha1"></div>
+                <div id="linha2"></div>
+            <div id="linha3"></div>
+            </div>
+            </div>
+            <div class="cadastro">
+                <div><a href="#"><h1>Cadastre-se</h1></a><img src="img/User1.png"></div>
+                <div><a href="#"><h2>Metas 2023</h2></a><img src="img/pngwing.com (1).png"></div>
+            </div>
+        <div class="banner">
+            <img src="img/wMESLIVROdesk.png">
+            <h1> Livros Recomendados </h1>
+        </div>
+        <div class="livros">
+            <div><img src="img/30142671.webp"><h3>Rápido E Devagar: Duas Formas De Pensar</h3><h4>2R$</h4></div>
+            <div><img src="img/ceu que nos oprime.webp"><h3>O Céu Que Nos Oprime</h3><h4>2R$</h4></div>
+            <div><img src="img/pequeno principe.webp"><h3>O Pequeno Príncipe</h3><h4>2R$</h4></div>
+            <div><img src="img/homem de giz.webp"><h3>O Homem De Giz</h3><h4>2R$</h4></div>
+            <div><img src="img/46439767.webp"><h3>Mindset: A Nova Psicologia Do Sucesso</h3><h4>2R$</h4></div>
+
+        <script>
+            const lista = document.querySelector('.lista');
+            const burguer= document.querySelector('.burguer');
+            const linha1 = document.querySelector('#linha1');
+            const linha2 = document.querySelector('#linha2');
+            const linha3 = document.querySelector('#linha3');
+            burguer.addEventListener('click' ,()=>
+            {
+                linha1.classList.toggle('linha1-active');
+                linha3.classList.toggle('linha3-active');
+                linha2.classList.toggle('linha2-active');
+                lista.classList.toggle('nav-active');
+                console.log("teste");
+    
+    
+            });
+    
+        </script>
+</body>
+</html> 

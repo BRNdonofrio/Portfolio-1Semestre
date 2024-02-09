@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond</title>
+    <link rel="icon" href="imagem/shurtIcon.jpg">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="topo">
+        <h1>Beyond Burger</h1>
+        <ul class="nav-links">
+            <a href="#"><li>Menu</li></a>
+                <a href="#"><li>Cardápio</li></a>
+                <a href="#"><li>Contato</li></a>
+            <a href="#"><li>Reserva</li></a>
+        </ul>
+        <div class="burguer">
+            <div id="linha1"></div>
+                <div id="linha2"></div>
+            <div id="linha3"></div>
+        </div>
+    </div>
+    
+    <script>
+        const menu = document.querySelector('.nav-links');
+        const burguer= document.querySelector('.burguer');
+        const linha1 = document.querySelector('#linha1');
+        const linha2 = document.querySelector('#linha2');
+        const linha3 = document.querySelector('#linha3');
+        burguer.addEventListener('click' ,()=>
+        {
+            linha1.classList.toggle('linha1-active');
+            linha2.classList.toggle('linha2-active');
+            linha3.classList.toggle('linha3-active');
+            menu.classList.toggle('nav-active');
+            console.log("teste");
+
+
+        });
+
+    </script>
+</body>
+</html>
+

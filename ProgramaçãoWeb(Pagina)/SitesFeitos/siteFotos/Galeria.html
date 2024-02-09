@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="shortcut icon" href="imagens/bolaDeLa.png">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="fg">
+        <img src="imagens/gato1.png" alt="" id="ft1">
+        <img src="imagens/gato2.png" alt="" id="ft2">
+        <img src="imagens/gato3.png" alt="" id="ft3">
+        <img src="imagens/gato4.png" alt="" id="ft4"> 
+        <img src="imagens/gato5.png" alt="" id="ft5">
+        <img src="imagens/gato6.png" alt="" id="ft6"> 
+        <img src="imagens/gato7.png" alt="" id="ft7">
+        <img src="imagens/GatonoPão.jpg" alt="" id="ft8">
+        <img src="imagens/GatoTriste.jpg" alt="" id="ft9">
+        <img src="imagens/GatoPidão.jpg" alt="" id="ft10">
+        <img src="imagens/Gato Sério.jpg" alt="" id="ft11">
+    </div>
+    <p id="texto"></p>
+    <div class="fp">
+        <img src="imagensMinis/gato1.png" alt="" data-foto="#ft1" data-texto="Gato Rolando">
+        <img src="imagensMinis/gato2.png" alt="" data-foto="#ft2" data-texto="Gato Astronauta">
+        <img src="imagensMinis/gato3.png" alt="" data-foto="#ft3" data-texto="Gato na Caixa">
+        <img src="imagensMinis/gato4.png" alt="" data-foto="#ft4" data-texto="Gato Deitado">
+        <img src="imagensMinis/gato5.png" alt="" data-foto="#ft5" data-texto="Gato com Nojo">
+        <img src="imagensMinis/gato6.png" alt="" data-foto="#ft6" data-texto="Gato Cheirando">
+        <img src="imagensMinis/gato7.png" alt="" data-foto="#ft7" data-texto="Gato Espantado">
+        <img src="imagensMinis/GatonoPão.jpg" alt="" data-foto="#ft8" data-texto="Gato Pão">
+        <img src="imagensMinis/GatoTriste.jpg" alt="" data-foto="#ft9" data-texto="Gato Triste">
+        <img src="imagensMinis/GatoPidão.jpg" alt="" data-foto="#ft10" data-texto="Gato Pidão">
+        <img src="imagensMinis/Gato Sério.jpg" alt="" data-foto="#ft11" data-texto="Gato Sério">
+
+    </div>
+    <script>
+        const imagensMinis = document.querySelectorAll('.fp>img');
+        imagensMinis.forEach(element => {
+            element.addEventListener('click',() =>{
+                console.log(element.dataset.foto);
+                let id = element.dataset.foto;
+                let texto = element.dataset.texto;
+                $('.fg>img').fadeOut(1000);
+                $(id).fadeIn(500);
+                $('#texto').html(texto);
+            });
+        });
+    </script>
+</body>
+</html>

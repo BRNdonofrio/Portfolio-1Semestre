@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(imagens/fundoGato.jpg);
+}
+@font-face {
+    font-family: 'Lobster-Regular';
+    src: url('Lobster-Regular.ttf') format('truetype'); 
+  }
+.fg{
+    height: 336px;
+    justify-content: center;
+    display: flex;
+    margin-top: 10%;
+}
+.fg > img{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+.fp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.fp>img{
+    width: 96.6px;
+    margin: 2px;
+    border: solid 1px black;
+    cursor: pointer;
+    box-shadow: rgb(47, 44, 53) 5px 5px;
+}
+.fp>:hover{
+    background-color: gray;
+    box-shadow: 0 0 0;
+    transform: scale(1.2);
+}
+#texto{
+    text-align: center;
+    font-family: 'Lobster-Regular';
+    src: url('Lobster-Regular.ttf') format('truetype');
+    color: rgb(0, 0, 0);
+    font-size: 350%;
+}

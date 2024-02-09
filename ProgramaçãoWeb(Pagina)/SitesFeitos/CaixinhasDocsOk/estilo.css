@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.css{
+    background-color: black;
+    
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 0.5%;
+    margin-left: 1%;
+    line-height: 25px;
+    margin-left: 35%;
+    margin-top: 1%;
+    background-color: rgb(194, 158, 168);
+    float: left;
+    border: solid 5px black;
+}
+input[type="text"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+input[type="email"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+input[type="tel"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+input[type="date"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+input[type="number"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+input[type="radio"] {
+    cursor: pointer;
+}
+textarea{
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+}
+.nome{
+    padding-bottom: 2%;
+}
+.gmail{
+   padding-top: 2%;
+}
+.sexo{
+   padding-top: 2%;
+}
+.CPF{
+    padding-top: 2%;
+}
+.Escolaridade{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.nascimento{
+    padding-top: 2%;
+}
+.Botao{
+    border: solid 2px black;
+    background-color: brown;
+    align-items: center;
+    text-align: center;
+}
+input[type="submit"] {
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: white;
+    height: 25px;
+    width: 300px;
+    cursor: pointer;
+}
